@@ -34,13 +34,12 @@ public class Accueil extends JPanel {
     
     message.setBounds(100, 10, 500, 14);
     
-    ajout.setBounds(150, 100, 140, 50);
-    ajout.setBounds(23, 99, 140, 23);
-    suppression.setBounds(150, 100, 140, 23);
-    listing.setBounds(297, 99, 140, 23);
-    modification.setBounds(10, 189, 140, 23);
-    statistique.setBounds(144, 189, 140, 23);
-    recherche.setBounds(287, 189, 140, 23);
+    ajout.setBounds(20, 99, 120, 23);
+    suppression.setBounds(180, 100, 120, 23);
+    listing.setBounds(340, 99, 120, 23);
+    modification.setBounds(20, 189, 120, 23);
+    statistique.setBounds(180, 189, 120, 23);
+    recherche.setBounds(340, 189, 120, 23);
     
     }
     
