@@ -17,14 +17,7 @@ public class ODRDBAccess implements ODRInterfaceDABD{
     
     public void addODR (ODR ordre) throws AddODRException
     {
-        try
-        {
-        //instructions SQL
-        }
-        catch(SQLException e)
-        {
-        throw new AddODRException(e.getMessage());
-        }
+      
     }
     
         public ArrayList <ODR>getAllODR() /*throws AllODRException*/

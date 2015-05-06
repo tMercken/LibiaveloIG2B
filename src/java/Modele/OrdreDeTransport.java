@@ -7,18 +7,8 @@ package Modele;
 
 /**
  *
- * @author Quentin
+ * @author client
  */
-public class ODR {
-    private int id;
+public class OrdreDeTransport {
     
-    public ODR (int id)
-    {
-    this.id = id;
-    }
-    
-    public int getId()
-    {
-        return id;
-    }
 }
