@@ -5,28 +5,52 @@
  */
 package Modele;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
- * @author client
+ * @author Quentin
  */
 public class Velo {
-    private Integer idVelo;
-    private Date dateAchat; // est-ce le bon format de date ? à vérifier ;)
+    
+    // L'id n'est pas généré automatiquement => Integer et pas int
+    private Integer id;
+    private GregorianCalendar dateAchat;
     private String marque;
-    private Station idStation;
-    private OrdreDeTransport idOrdreTransport;
+    private ODT ordre;
+    private Station station;
     
-    public Velo (Integer id, Date dAchat, String m, Station idSt, OrdreDeTransport idOrdTransp){
-        this.idVelo = id;
-        this.dateAchat = dAchat;
+    public Velo (int id, GregorianCalendar dateAchat, Station s) {
+        this.id = id;
+        this.dateAchat = dateAchat; 
+        this.marque = null;
+        this.ordre = null;
+        this.station = s;
+    }
+    
+    public Velo (int id, GregorianCalendar dateAchat, String marque, ODT ordre, Station station){
+        this.id = id;
+        this.dateAchat = dateAchat;
+        this.marque = marque;
+        this.ordre = ordre;
+        this.station = station;
+    }    
+    
+    public int getID(){
+        return this.id;
+    }
+    
+    public void setMarque(String m){
         this.marque = m;
-        this.idStation = idSt;
-        this.idOrdreTransport = idOrdTransp;        
     }
     
-    public Integer getIdVelo(){
-        return this.idVelo;
+    public void setODT(ODT ordre){
+        this.ordre = ordre;
     }
+    
+    public void setStation(Station s){
+        this.station = s;
+    }
+    
+    
 }

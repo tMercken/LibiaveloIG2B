@@ -9,20 +9,19 @@ package Exception;
  *
  * @author client
  */
- public class BDConnectionException extends Exception {
+public class InputException extends Exception{
     String e;
     
-    public BDConnectionException(String messageSQLError)
+    public InputException(String messageError)
     {
-        e = messageSQLError;
+        e = messageError;
     }
     
-    public String toString(){// Vérifier orthographe
-        return "Erreur lors de la tentative de connexion à la Base de donnée";        
+    public String toString(){ // Vérifier orthographe
+        return "Les données entrées par l'utilisateur sont erronées";    
     }
     
     public String getMessage(){ 
         return e;
     }
 }
-

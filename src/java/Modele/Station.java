@@ -7,30 +7,29 @@ package Modele;
 
 /**
  *
- * @author client
+ * @author Quentin
  */
 public class Station {
-    private Integer id; //pas vraiment besoin de mettre Integer plutôt que int
+    private int id;
     private String nomRue;
     private String numRue;
-    private Integer codePostal; // vu que ces variables ne sont normalement jamais null
+    
+    // Même si codePostal est obligatoire et que l'utilisateur ne touche pas au station, ça ne devrait pas être un int selon moi è_é
+    private Integer codePostal;
     private String localite;
-    private Integer nbrVeloMax; // Mais mieux vaut prévenir que guérir...
     
-    public Station(Integer id, String nomR, String numR, Integer codeP,String local, Integer nbVeloM){
+    public Station(int id, String nomRue, String numRue, int codePostal, String localite)
+    {
         this.id = id;
-        this.nomRue = nomR;
-        this.numRue = numR;
-        this.codePostal = codeP;
-        this.localite = local;
-        this.nbrVeloMax = nbVeloM;
-    }
+        this.nomRue = nomRue;
+        this.numRue = numRue;
+        this.codePostal = codePostal;
+        this.localite = localite;
+    }            
     
-    public Integer getIdStation(){
+    public int getID(){
         return this.id;
     }
-    
-    public Integer getNbVeloMax(){
-        return this.nbrVeloMax;
-    }
 }
+    
+    
